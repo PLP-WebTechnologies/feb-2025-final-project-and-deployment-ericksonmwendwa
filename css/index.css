@@ -1,0 +1,155 @@
+/* Hero */
+.hero {
+  padding: 48px 24px;
+}
+
+.hero-container {
+  max-width: 95%;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 64px;
+}
+
+@media (min-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+}
+
+.text-content {
+  padding-right: 32px;
+}
+
+.subtitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 600;
+  margin-top: 12px;
+}
+
+@media (min-width: 640px) {
+  .title {
+    font-size: 48px;
+  }
+}
+
+.description {
+  margin-top: 24px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.features {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.feature-item {
+  position: relative;
+  padding-left: 32px;
+}
+
+.feature-item dt {
+  font-weight: 600;
+}
+
+.feature-item dd {
+  display: inline;
+  margin-left: 8px;
+}
+
+.icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 20px;
+  color: var(--primary-color);
+}
+
+.image-content img {
+  width: 100%;
+  max-width: 912px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Newsletter */
+.newsletter-section {
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  margin: 3rem;
+  border-radius: 1rem;
+  color: var(--inverted-color);
+  background-color: var(--inverted-bg);
+}
+
+.newsletter-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.subscribe-text {
+  width: 60%;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 500;
+}
+
+.subscribe-form {
+  width: 40%;
+  text-align: center;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  min-height: 50px;
+  width: 100%;
+  padding: 0 1rem;
+  color: #fff;
+  font-size: 15px;
+  border: 2px solid var(--primary-color);
+  border-radius: 8px 0 0 8px;
+  background-color: transparent;
+}
+
+.subscribe {
+  min-height: 50px;
+  padding: .5em 1em;
+  border: none;
+  border-radius: 0 6px 6px 0;
+  background-color: var(--primary-color);
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color .3s ease-in-out;
+}
+
+.subscribe:hover {
+  background-color: #155dfc;
+}
+
+.input:focus,
+.input:focus-visible {
+  border-color: var(--primary-color);
+  outline: none;
+}

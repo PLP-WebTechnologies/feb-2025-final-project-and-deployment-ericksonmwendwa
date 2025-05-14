@@ -1,0 +1,165 @@
+/* Stats */
+.stats-title {
+  font-size: 3rem;
+  text-align: center;
+  line-height: 5rem;
+  font-weight: 600;
+}
+
+.stats-section {
+  padding: 96px 24px;
+}
+
+.stats-container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 64px 32px;
+}
+
+@media (min-width: 1024px) {
+  .stats-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.stat-item {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.stat-value {
+  order: -1;
+  font-size: 36px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+@media (min-width: 640px) {
+  .stat-value {
+    font-size: 48px;
+  }
+}
+
+.stat-label {
+  font-size: 16px;
+  color: #4b5563;
+  line-height: 1.75;
+}
+
+/* FAQ */
+.faq {
+  height: 100dvh;
+  max-width: 60%;
+  margin: 0 auto;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .faq {
+    max-width: 100%;
+  }
+}
+
+.faq h1 {
+  margin: 2rem;
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Accordion */
+.accordion {
+  border-radius: 8px;
+}
+
+.accordion-item {
+  border-bottom: 1px solid #ddd;
+  position: relative;
+  overflow: hidden;
+}
+
+.accordion-item input {
+  display: none;
+}
+
+.accordion-item label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding-top: 1rem;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+}
+
+.accordion-content {
+  transform-origin: top;
+  transform: scaleY(0);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  padding: 0 1rem;
+  height: auto;
+}
+
+.accordion-item input:checked~.accordion-content {
+  transform: scaleY(1);
+  opacity: 1;
+  padding: 1rem;
+}
+
+/* Plus / Minus Button */
+.button {
+  position: relative;
+  width: 16px;
+  height: 16px;
+}
+
+.button::before,
+.button::after {
+  content: "";
+  position: absolute;
+  background-color: #333;
+  transition: transform 0.25s ease-out;
+}
+
+/* Vertical line */
+.button::before {
+  top: 0;
+  left: 50%;
+  width: 3px;
+  height: 100%;
+  margin-left: -1.5px;
+}
+
+/* Horizontal line */
+.button::after {
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  margin-top: -1.5px;
+}
+
+/* Turn into minus when checked */
+.accordion-item input:checked+label .button::before {
+  transform: scaleY(0);
+}
+
+.accordion-item input:checked+label .button::after {
+  transform: rotate(180deg);
+}
