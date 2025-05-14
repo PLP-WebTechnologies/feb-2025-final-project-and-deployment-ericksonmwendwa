@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | SecurePass</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/contact.css">
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      <div class="logo">SecurePass</div>
+      <div class="controls">
+        <div class="dark-mode-toggle" id="darkModeToggle">🌙</div>
+        <div class="menu-icon" id="menuToggle">☰</div>
+      </div>
+      <div class="nav-links" id="navLinks">
+        <a href="./index.html">Home</a>
+        <a href="./about.html">About</a>
+        <a href="./contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="contact-section">
+    <div class="contact-header">
+      <h1 class="contact-title">Let's get in touch</h1>
+      <p class="contact-description">
+        Great! We're excited to hear from you. Please fill out the form and we'll get back to you as soon as possible.
+      </p>
+    </div>
+    <div class="form-container">
+      <form id="contactForm" class="contact-form" novalidate>
+        <div>
+          <input type="text" name="name" id="name" class="form-input" placeholder="Full name" required />
+          <div id="nameError" class="error-message">Please enter your name.</div>
+        </div>
+        <div>
+          <input type="email" name="email" id="email" class="form-input" placeholder="Email address" required />
+          <div id="emailError" class="error-message">Please enter a valid email address.</div>
+        </div>
+        <div>
+          <textarea name="message" id="message" rows="4" class="form-textarea" placeholder="Write your message here..."
+            required></textarea>
+          <div id="messageError" class="error-message">Please enter a message.</div>
+        </div>
+        <button type="submit" class="submit-button">Send</button>
+      </form>
+    </div>
+  </section>
+
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
